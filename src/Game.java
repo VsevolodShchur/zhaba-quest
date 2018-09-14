@@ -3,8 +3,9 @@ public class Game {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
-		Room currentRoom;
-		
+		Level level = new Level();
+		Room currentRoom = level.GetStartRoom();
+
 		while (true)
 		{
 			String request = input.nextLine().toLowerCase().replaceAll("\\s","");
