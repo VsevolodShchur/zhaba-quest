@@ -10,8 +10,9 @@ public class Game {
 		Room currentRoom = level.GetStartRoom();
 
 		while (true) {
-			String[] requestWords = GetWords();
+			String[] requestWords = getWords();
 
+			//Need to be incapsulated later
 			Action action = null;
 			for (String word : requestWords) {
 				if (currentRoom.KeyWords.containsKey(word)) {
@@ -19,7 +20,7 @@ public class Game {
 					if (action == null || action == act)
 						action = act;
 					else {
-						System.out.println("�������� ���-�� ����");
+						System.out.println("You must chose one option!");
 						action = null;
 						break;
 					}
@@ -27,14 +28,14 @@ public class Game {
 			}
 			if (action != null) {
 				action.Act();
-				// �� ����������� ��null���, �� �� ������ ������
+				//Actually there is no need to null it, but i do it just in case
 				action = null;
 			}
 		}
 	}
 
-	public static String[] GetWords() {
-		// � ���� ������ ����� ������ ������� ���� � �����������, �� �����
+	public static String[] getWords() {
+		//Later we can change our input to Alice or whatever we want
 		return input.nextLine().toLowerCase().split(" ");// .replaceAll("\\s","");
 	}
 
