@@ -6,7 +6,7 @@ public class Game {
 
 	public static void main(String[] args) {
 
-		Level level = new Level()
+		Level level = new Level();
 		Room currentRoom = level.GetStartRoom();
 
 		while (true) {
