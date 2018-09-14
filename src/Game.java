@@ -10,6 +10,7 @@ public class Game {
 		Room currentRoom = level.GetStartRoom();
 
 		while (true) {
+			System.out.println(currentRoom.getDescription());
 			String[] requestWords = getWords();
 
 			//Need to be incapsulated later
