@@ -9,6 +9,8 @@ public class Room {
 	public Room(){
 	    KeyWords = new HashMap<String, Action>();
 	    description = "You are in an empty room.";
+	    KeyWords.put("привет", new Action());
+	    KeyWords.put("сева", new Action());
     }
 	
 	public String getDescription()
