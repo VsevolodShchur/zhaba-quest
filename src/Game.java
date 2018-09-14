@@ -5,7 +5,6 @@ public class Game {
 	private static Scanner input = new Scanner(System.in);
 
 	public static void main(String[] args) {
-<<<<<<< HEAD
 
 		Room currentRoom = new Room();
 
@@ -30,17 +29,6 @@ public class Game {
 				// не обязательно обnullять, но на всякий случай
 				action = null;
 			}
-=======
-		Scanner input = new Scanner(System.in);
-		Level level = new Level();
-		Room currentRoom = level.GetStartRoom();
-
-		while (true)
-		{
-			String request = input.nextLine().toLowerCase().replaceAll("\\s","");
-			if (currentRoom.KeyWords.containsKey(request))
-				currentRoom.KeyWords.get(request);
->>>>>>> e5eeae057396969b7d61d24454ef31d78b429634
 		}
 	}
 
