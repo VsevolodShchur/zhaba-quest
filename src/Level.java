@@ -11,8 +11,10 @@ public class Level {
         roomList = roomList1;
     }
 
-    public Level (String fileName) throws Exception{
-        String sFile = FileWorker.read("..\\levels\\" + fileName);
+    public Level (String fileName){
+        //String sFile = FileWorker.read("../levels/" + fileName);
+        String sFile = FileWorker.read(fileName);
+        System.out.println(sFile);
         String[] rawLevels = sFile.split("[{](.*)[}]");
         for (String rawLevel : rawLevels){
             System.out.println(rawLevel);

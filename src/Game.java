@@ -1,17 +1,23 @@
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
+import java.io.IOException;
 
 public class Game {
 
 	private static Scanner input = new Scanner(System.in);
 	private static Map<String, Action> commonCommands = new HashMap<String, Action>();
-	private static Level level = new Level();
-	private static Room currentRoom = level.GetStartRoom();
+	private static Level level;
+	private static Room currentRoom;
 
 	public static void main(String[] args) {
+        try{
+            level = new Level("level1.txt");
+            currentRoom = level.GetStartRoom();
+        }
+        catch (Exception e){}
 
-		while (true) {
+        while (true) {
 			System.out.println(currentRoom.getDescription());
 			String[] requestWords = getWords();
 			Action action = getAction(requestWords);
